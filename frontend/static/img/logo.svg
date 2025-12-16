@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <!-- Vibrant Multi-Color Gradient -->
+    <linearGradient id="vibrantGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF00FF;stop-opacity:1" /> <!-- Neon Magenta -->
+      <stop offset="33%" style="stop-color:#9D00FF;stop-opacity:1" /> <!-- Deep Purple -->
+      <stop offset="66%" style="stop-color:#00FFFF;stop-opacity:1" /> <!-- Cyan -->
+      <stop offset="100%" style="stop-color:#00FF99;stop-opacity:1" /> <!-- Neon Green -->
+    </linearGradient>
+    
+    <!-- Hard Glow for visibility -->
+    <filter id="hardGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <g transform="translate(256, 256) scale(1.1) translate(-256, -256)">
+    <!-- Brain Outline Background (Filled for high visibility) -->
+    <path d="M256 48 
+             C160 48 80 128 80 224 
+             C80 300 120 360 160 384 
+             L160 432 
+             C160 448 192 464 256 464 
+             C320 464 352 448 352 432 
+             L352 384 
+             C392 360 432 300 432 224 
+             C432 128 352 48 256 48 Z" 
+          fill="url(#vibrantGrad)" 
+          filter="url(#hardGlow)" 
+          opacity="0.2" />
+
+    <!-- Left Hemisphere: Digital Neurons (Thick Lines) -->
+    <path d="M248 80 C180 80 120 140 120 224 C120 280 150 340 180 360" 
+          fill="none" 
+          stroke="#FF00FF" 
+          stroke-width="24" 
+          stroke-linecap="round" />
+          
+    <circle cx="160" cy="180" r="16" fill="#00FFFF" />
+    <circle cx="140" cy="260" r="12" fill="#00FF99" />
+    
+    <!-- Right Hemisphere: Robotic Circuit/Gear -->
+    <path d="M264 80 L328 80 L344 112 L376 112 L392 144 L410 224 L392 300 L370 340 L330 360" 
+          fill="none" 
+          stroke="#00FFFF" 
+          stroke-width="24" 
+          stroke-linejoin="round" />
+          
+    <!-- Central Connection (The Corpus Callosum) -->
+    <path d="M256 120 L256 360" 
+          stroke="#FFFFFF" 
+          stroke-width="12" 
+          stroke-linecap="round" 
+          opacity="0.8">
+          <animate attributeName="stroke-dasharray" values="0 50;50 0" dur="1s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Robotic Eye/Lens in Center -->
+    <circle cx="256" cy="240" r="40" fill="#111" stroke="#fff" stroke-width="4" />
+    <circle cx="256" cy="240" r="20" fill="#00FFFF">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

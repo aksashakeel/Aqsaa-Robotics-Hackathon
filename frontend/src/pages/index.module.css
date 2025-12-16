@@ -1,0 +1,87 @@
+.heroBanner {
+  padding: 6rem 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 30px rgba(76, 201, 240, 0.3);
+}
+
+.heroTitle span {
+  background: linear-gradient(90deg, #b5179e, #f72585);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  color: #a0a8b6;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.signInBtn {
+  background: linear-gradient(45deg, #7209b7, #f72585);
+  border: none;
+  color: white !important;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.signInBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(247, 37, 133, 0.6);
+}
+
+.robotContainer {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.robotPlaceholder {
+  font-size: 150px;
+  filter: drop-shadow(0 0 50px rgba(76, 201, 240, 0.8));
+  animation: float 6s ease-in-out infinite;
+}
+
+.hologramCircle {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(76,201,240,0.2) 0%, rgba(0,0,0,0) 70%);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}

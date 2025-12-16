@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Variable Definitions: Earthy Minimalist --- */
+:root {
+  /* Primary Color Palette (Soft & Natural) */
+  --ifm-color-primary: #587d5f; /* Deep Sage Green */
+  --ifm-color-primary-dark: #3a5c41; 
+  --ifm-color-primary-darker: #2d4532;
+  --ifm-color-primary-darkest: #1f2f23;
+  --ifm-color-primary-light: #7da585;
+  --ifm-color-primary-lighter: #a3c9aa;
+  --ifm-color-primary-lightest: #c5e0c9;
+
+  /* Typography */
+  --ifm-font-family-base: 'Lato', 'Segoe UI', sans-serif;
+  --ifm-heading-font-family: 'Merriweather', 'Georgia', serif;
+
+  /* Backgrounds */
+  --ifm-background-color: #f7f3e8; /* Light Cream Background */
+  --ifm-background-surface-color: #ffffff; /* White Surface */
+  
+  /* Text & Borders */
+  --text-dark: #2f2f2f;
+  --text-light: #444444;
+  --border-subtle: rgba(0, 0, 0, 0.1);
+  --shadow-subtle: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Dark Theme Overrides --- */
+[data-theme='dark'] {
+  --ifm-background-color: #262626; /* Dark Grey Background */
+  --ifm-navbar-background-color: #333333;
+  --ifm-footer-background-color: #1e1e1e;
+  --ifm-font-color-base: #e0e0e0;
+  --ifm-background-surface-color: #333333;
+  --text-dark: #e0e0e0;
+  --text-light: #cccccc;
+}
+
+/* --- Global Background --- */
+body {
+  /* Simple, fixed background color */
+  background: var(--ifm-background-color);
+  background-attachment: fixed;
+  color: var(--text-light);
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark); /* Dark text on light background */
+  text-transform: none; /* Remove uppercase */
+  letter-spacing: normal;
+  font-weight: 700;
+}
+
+/* Headings Styling */
+.markdown h1 {
+  color: var(--ifm-color-primary-dark); /* Dark Sage */
+  border-bottom: 2px solid var(--ifm-color-primary-lighter);
+  padding-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.markdown h2 {
+  color: var(--ifm-color-primary); /* Sage Green */
+  margin-top: 2.5rem;
+  border-left: 5px solid var(--ifm-color-primary-light);
+  padding-left: 15px;
+}
+
+.markdown h3 {
+  color: var(--text-dark);
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+
+.markdown h4, .markdown h5, .markdown h6 {
+  color: var(--text-light);
+}
+
+
+/* --- Navbar --- */
+.navbar {
+  background-color: var(--ifm-background-surface-color); /* Solid white/grey */
+  box-shadow: var(--shadow-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.navbar__brand {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Make Logo Simple */
+.navbar__logo {
+  height: 40px; 
+  margin-right: 10px;
+  filter: none; /* Remove glow */
+  transition: none;
+}
+
+.navbar__logo:hover {
+  transform: none; /* Remove hover effect */
+}
+
+.navbar__title {
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: var(--text-dark);
+  font-size: 1.2rem;
+}
+
+/* --- Custom Button Classes --- */
+.button--primary {
+  background: var(--ifm-color-primary);
+  border: 1px solid var(--ifm-color-primary-dark);
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  text-transform: none;
+  letter-spacing: normal;
+  transition: all 0.2s ease;
+}
+
+.button--primary:hover {
+  background: var(--ifm-color-primary-dark);
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: var(--ifm-color-primary-dark);
+}
+
+.button--secondary {
+  background: #f0f0f0;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-dark);
+}
+
+.button--secondary:hover {
+  border-color: var(--ifm-color-primary-light);
+  color: var(--ifm-color-primary-dark);
+  background: #e9e9e9;
+}
+
+/* --- Simple, Elevated Cards --- */
+.card {
+  background: var(--ifm-background-surface-color);
+  backdrop-filter: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px; /* Softer edges */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* More traditional shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--ifm-color-primary-light);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card__header h3 {
+  color: var(--ifm-color-primary-dark);
+  text-shadow: none;
+}
+
+
+/* --- Other Elements --- */
+.neon-text {
+  /* Remove neon effect */
+  color: var(--ifm-color-primary); 
+  text-shadow: none; 
+  font-weight: 700;
+}
